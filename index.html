@@ -354,6 +354,9 @@ function updateStats() {
 // ── Status Dropdown ──
 function openStatusDropdown(cardEl, card) {
   closeAllDropdowns();
+  const cell = cardEl.closest('.cell');
+  if (cell) cell.style.zIndex = '60';
+
   const dd = document.createElement('div');
   dd.className = 'status-dd open';
   STATUS_ORDER.forEach(s => {
@@ -375,6 +378,7 @@ function openStatusDropdown(cardEl, card) {
 }
 
 function closeAllDropdowns() {
+  document.querySelectorAll('.cell').forEach(c => c.style.zIndex = '');
   document.querySelectorAll('.status-dd').forEach(d => d.remove());
 }
 
