@@ -70,7 +70,7 @@ h1 { font-size:24px; font-weight:700; margin-bottom:4px; }
 .cell-add:hover { border-color:var(--accent); color:var(--accent); background:rgba(99,102,241,.08); }
 
 /* Card */
-.card { display:flex; align-items:center; gap:5px; padding:5px 10px; border-radius:6px; font-size:11px; font-weight:500; line-height:1.3; cursor:grab; user-select:none; position:relative; transition:transform .12s,box-shadow .12s,opacity .12s; }
+.card { display:flex; flex-direction:column; gap:2px; padding:5px 10px; border-radius:6px; font-size:11px; font-weight:500; line-height:1.3; cursor:grab; user-select:none; position:relative; transition:transform .12s,box-shadow .12s,opacity .12s; }
 .card:active { cursor:grabbing; }
 .card.dragging { opacity:.25; transform:scale(.95); }
 .card:hover { transform:translateY(-1px); box-shadow:0 4px 12px rgba(0,0,0,.3); }
@@ -78,11 +78,16 @@ h1 { font-size:24px; font-weight:700; margin-bottom:4px; }
 .card.testing { background:var(--testing); color:var(--testing-text); }
 .card.wip { background:var(--wip); color:var(--wip-text); }
 .card.backlog { background:var(--backlog); color:var(--backlog-text); }
+.card-row { display:flex; align-items:center; gap:5px; width:100%; }
 .card .icon { font-size:10px; flex-shrink:0; }
 .card .card-name { flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; }
 .card .card-del { display:none; font-size:13px; line-height:1; cursor:pointer; opacity:.6; padding:0 2px; flex-shrink:0; }
 .card .card-del:hover { opacity:1; }
 .card:hover .card-del { display:block; }
+.card-qa { font-size:9px; opacity:.65; cursor:text; padding:1px 0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; width:100%; }
+.card-qa:empty::before { content:'+ QA'; opacity:.5; }
+.card-qa-input { width:100%; font-size:9px; padding:1px 4px; border:1px solid rgba(255,255,255,.25); border-radius:3px; background:rgba(0,0,0,.3); color:inherit; outline:none; font-family:inherit; }
+.card-qa-input:focus { border-color:var(--accent); }
 
 /* Status dropdown */
 .status-dd { position:absolute; top:100%; left:0; background:var(--surface2); border:1px solid var(--border); border-radius:8px; padding:4px; z-index:50; box-shadow:0 8px 24px rgba(0,0,0,.5); min-width:150px; display:none; }
@@ -146,6 +151,8 @@ h1 { font-size:24px; font-weight:700; margin-bottom:4px; }
     <h2>Новая карточка</h2>
     <label>Название теста</label>
     <input type="text" id="addName" placeholder="Название теста...">
+    <label>Main QA</label>
+    <input type="text" id="addQa" placeholder="Имя QA (необязательно)">
     <label>Статус</label>
     <select id="addStatus">
       <option value="backlog">Бэклог</option>
@@ -276,23 +283,28 @@ function render() {
 }
 
 function renderCard(card) {
+  if (!card.qa) card.qa = '';
+
   const d = document.createElement('div');
   d.className = 'card ' + card.status;
   d.draggable = true;
   d.dataset.cardId = card.id;
+
+  const row = document.createElement('div');
+  row.className = 'card-row';
 
   const meta = STATUS_META[card.status];
   if (meta.icon) {
     const ic = document.createElement('span');
     ic.className = 'icon';
     ic.textContent = meta.icon;
-    d.appendChild(ic);
+    row.appendChild(ic);
   }
 
   const name = document.createElement('span');
   name.className = 'card-name';
   name.textContent = card.name;
-  d.appendChild(name);
+  row.appendChild(name);
 
   const del = document.createElement('span');
   del.className = 'card-del';
@@ -303,10 +315,35 @@ function renderCard(card) {
       deleteCard(card.id);
     }
   });
-  d.appendChild(del);
+  row.appendChild(del);
+  d.appendChild(row);
+
+  const qa = document.createElement('div');
+  qa.className = 'card-qa';
+  qa.textContent = card.qa;
+  qa.addEventListener('click', e => {
+    e.stopPropagation();
+    const input = document.createElement('input');
+    input.className = 'card-qa-input';
+    input.value = card.qa;
+    input.placeholder = 'Main QA...';
+    qa.replaceWith(input);
+    input.focus();
+    d.draggable = false;
+    const save = () => {
+      const val = input.value.trim();
+      card.qa = val;
+      d.draggable = true;
+      markDirty();
+      render();
+    };
+    input.addEventListener('blur', save);
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') input.blur(); if (e.key === 'Escape') { input.value = card.qa; input.blur(); } });
+  });
+  d.appendChild(qa);
 
   d.addEventListener('click', e => {
-    if (e.target.classList.contains('card-del')) return;
+    if (e.target.classList.contains('card-del') || e.target.classList.contains('card-qa') || e.target.classList.contains('card-qa-input')) return;
     openStatusDropdown(d, card);
   });
 
@@ -386,6 +423,7 @@ function closeAllDropdowns() {
 function openAddModal(layerId, platform, month) {
   addTarget = { layerId, platform, month };
   document.getElementById('addName').value = '';
+  document.getElementById('addQa').value = '';
   document.getElementById('addStatus').value = 'backlog';
   document.getElementById('addModal').classList.add('open');
   document.getElementById('addName').focus();
@@ -404,6 +442,7 @@ document.getElementById('addConfirm').addEventListener('click', () => {
   layer.cards.push({
     id: uid(),
     name,
+    qa: document.getElementById('addQa').value.trim(),
     platform: addTarget.platform,
     month: addTarget.month,
     status
@@ -600,7 +639,7 @@ document.getElementById('btnSave').addEventListener('click', saveToRemote);
 });
 
 // ── Default Data (embedded for file:// support) ──
-const DEFAULT_DATA = {"months":[{"id":"mar","label":"Март"},{"id":"apr","label":"Апрель"},{"id":"may","label":"Май"},{"id":"jun","label":"Июнь"}],"layers":[{"id":"onboarding","name":"Onboarding","cards":[{"id":"onb-1","name":"Ewa Max upgrade on onboarding","platform":"android","month":"mar","status":"done"},{"id":"onb-2","name":"Alternative Onboarding","platform":"android","month":"apr","status":"wip"},{"id":"onb-3","name":"Extended Level Test","platform":"android","month":"may","status":"wip"},{"id":"onb-4","name":"AI Avatar","platform":"android","month":"jun","status":"wip"},{"id":"onb-5","name":"Ewa Max upgrade on onboarding","platform":"ios","month":"mar","status":"done"},{"id":"onb-6","name":"Extended Level Test","platform":"ios","month":"apr","status":"wip"},{"id":"onb-7","name":"WebView","platform":"ios","month":"may","status":"wip"},{"id":"onb-8","name":"AI Avatar","platform":"ios","month":"jun","status":"wip"}]},{"id":"ai-monetization-1","name":"AI Monetization (50%) — блок 1","cards":[{"id":"ai1-1","name":"Ewa Max same duration","platform":"android","month":"mar","status":"testing"},{"id":"ai1-2","name":"Ewa Max same duration","platform":"android","month":"apr","status":"testing"},{"id":"ai1-3","name":"AI tutor trial","platform":"android","month":"may","status":"wip"},{"id":"ai1-4","name":"Short-subscription periods","platform":"android","month":"jun","status":"backlog"},{"id":"ai1-5","name":"Ewa Max same duration","platform":"ios","month":"mar","status":"testing"},{"id":"ai1-6","name":"Ewa Max same duration","platform":"ios","month":"apr","status":"testing"},{"id":"ai1-7","name":"AI tutor trial","platform":"ios","month":"may","status":"wip"},{"id":"ai1-8","name":"Short-subscription periods","platform":"ios","month":"jun","status":"backlog"}]},{"id":"ai-monetization-2","name":"AI Monetization (50%) — блок 2","cards":[{"id":"ai2-1","name":"In-app upgrade","platform":"android","month":"mar","status":"testing"},{"id":"ai2-2","name":"In-app upgrade","platform":"android","month":"apr","status":"testing"},{"id":"ai2-3","name":"AI tutor trial","platform":"android","month":"may","status":"wip"},{"id":"ai2-4","name":"Short-subscription periods","platform":"android","month":"jun","status":"backlog"},{"id":"ai2-5","name":"In-app upgrade","platform":"ios","month":"mar","status":"testing"},{"id":"ai2-6","name":"In-app upgrade","platform":"ios","month":"apr","status":"testing"},{"id":"ai2-7","name":"AI tutor trial","platform":"ios","month":"may","status":"wip"},{"id":"ai2-8","name":"Short-subscription periods","platform":"ios","month":"jun","status":"backlog"}]},{"id":"discounts","name":"Discounts","cards":[{"id":"disc-1","name":"6 months discounts","platform":"android","month":"mar","status":"done"},{"id":"disc-2","name":"Discount chain — engagement triggers","platform":"android","month":"apr","status":"wip"},{"id":"disc-3","name":"Paywall cascade — segment timing","platform":"android","month":"may","status":"backlog"},{"id":"disc-4","name":"6 months discounts","platform":"ios","month":"mar","status":"done"},{"id":"disc-5","name":"Discount chain — engagement triggers","platform":"ios","month":"apr","status":"wip"},{"id":"disc-6","name":"Paywall cascade — segment timing","platform":"ios","month":"may","status":"backlog"}]},{"id":"upsell","name":"Upsell","cards":[{"id":"ups-1","name":"Upsell flow v 1.0","platform":"android","month":"mar","status":"done"},{"id":"ups-2","name":"Upsell flow v 2.0","platform":"android","month":"apr","status":"backlog"},{"id":"ups-3","name":"Library banner","platform":"android","month":"may","status":"backlog"},{"id":"ups-4","name":"Upsell flow v 1.0","platform":"ios","month":"mar","status":"done"},{"id":"ups-5","name":"Upsell flow v 2.0","platform":"ios","month":"apr","status":"backlog"},{"id":"ups-6","name":"Library banner","platform":"ios","month":"may","status":"backlog"}]},{"id":"upgrade","name":"Upgrade","cards":[{"id":"upg-1","name":"6m upgrade","platform":"android","month":"apr","status":"wip"},{"id":"upg-2","name":"6m upgrade","platform":"ios","month":"apr","status":"wip"}]},{"id":"energy","name":"Energy","cards":[{"id":"nrg-1","name":"More energy for segment","platform":"android","month":"apr","status":"wip"},{"id":"nrg-2","name":"Energy paywalls — honest CTA","platform":"android","month":"may","status":"backlog"},{"id":"nrg-3","name":"Energy paywalls — Max upgrade","platform":"android","month":"jun","status":"backlog"},{"id":"nrg-4","name":"More energy for segment","platform":"ios","month":"apr","status":"wip"},{"id":"nrg-5","name":"Energy paywalls — honest CTA","platform":"ios","month":"may","status":"backlog"},{"id":"nrg-6","name":"Energy paywalls — Max upgrade","platform":"ios","month":"jun","status":"backlog"}]},{"id":"other","name":"Other","cards":[{"id":"oth-1","name":"Cancel flow","platform":"android","month":"may","status":"backlog"},{"id":"oth-2","name":"Cancel flow","platform":"ios","month":"may","status":"backlog"}]},{"id":"courses","name":"Courses","cards":[{"id":"crs-1","name":"Simplified lessons for W0","platform":"android","month":"apr","status":"wip"},{"id":"crs-2","name":"Simplified lessons for W0","platform":"ios","month":"apr","status":"wip"}]},{"id":"chat-dialogs","name":"Chat-dialogs","cards":[{"id":"chat-1","name":"Chat dialogs redesign v 1.0","platform":"android","month":"may","status":"backlog"},{"id":"chat-2","name":"Chat dialogs redesign v 2.0","platform":"android","month":"jun","status":"backlog"},{"id":"chat-3","name":"Chat dialogs redesign v 1.0","platform":"ios","month":"may","status":"backlog"},{"id":"chat-4","name":"Chat dialogs redesign v 2.0","platform":"ios","month":"jun","status":"backlog"}]}]};
+const DEFAULT_DATA = {"months":[{"id":"mar","label":"Март"},{"id":"apr","label":"Апрель"},{"id":"may","label":"Май"},{"id":"jun","label":"Июнь"}],"layers":[{"id":"onboarding","name":"Onboarding","cards":[{"id":"onb-1","name":"Ewa Max upgrade on onboarding","platform":"android","month":"mar","status":"done"},{"id":"onb-2","name":"Alternative Onboarding","platform":"android","month":"apr","status":"wip"},{"id":"onb-3","name":"Extended Level Test","platform":"android","month":"may","status":"wip"},{"id":"onb-4","name":"AI Avatar","platform":"android","month":"jun","status":"wip"},{"id":"onb-5","name":"Ewa Max upgrade on onboarding","platform":"ios","month":"mar","status":"done"},{"id":"onb-6","name":"Extended Level Test","platform":"ios","month":"apr","status":"wip"},{"id":"onb-7","name":"WebView","platform":"ios","month":"may","status":"wip"},{"id":"onb-8","name":"AI Avatar","platform":"ios","month":"jun","status":"wip"}]},{"id":"ai-monetization-1","name":"AI Monetization (50%) — блок 1","cards":[{"id":"ai1-1","name":"Ewa Max same duration","platform":"android","month":"mar","status":"testing"},{"id":"ai1-2","name":"Ewa Max same duration","platform":"android","month":"apr","status":"testing"},{"id":"ai1-3","name":"AI tutor trial","platform":"android","month":"may","status":"wip"},{"id":"ai1-4","name":"Short-subscription periods","platform":"android","month":"jun","status":"backlog"},{"id":"ai1-5","name":"Ewa Max same duration","platform":"ios","month":"mar","status":"testing"},{"id":"ai1-6","name":"Ewa Max same duration","platform":"ios","month":"apr","status":"testing"},{"id":"ai1-7","name":"AI tutor trial","platform":"ios","month":"may","status":"wip"},{"id":"ai1-8","name":"Short-subscription periods","platform":"ios","month":"jun","status":"backlog"}]},{"id":"ai-monetization-2","name":"AI Monetization (50%) — блок 2","cards":[{"id":"ai2-1","name":"In-app upgrade","platform":"android","month":"mar","status":"testing"},{"id":"ai2-2","name":"In-app upgrade","platform":"android","month":"apr","status":"testing"},{"id":"ai2-3","name":"AI tutor trial","platform":"android","month":"may","status":"wip"},{"id":"ai2-4","name":"Short-subscription periods","platform":"android","month":"jun","status":"backlog"},{"id":"ai2-5","name":"In-app upgrade","platform":"ios","month":"mar","status":"testing"},{"id":"ai2-6","name":"In-app upgrade","platform":"ios","month":"apr","status":"testing"},{"id":"ai2-7","name":"AI tutor trial","platform":"ios","month":"may","status":"wip"},{"id":"ai2-8","name":"Short-subscription periods","platform":"ios","month":"jun","status":"backlog"}]},{"id":"discounts","name":"Discounts","cards":[{"id":"disc-1","name":"6 months discounts","platform":"android","month":"mar","status":"done"},{"id":"disc-2","name":"Discount chain — engagement triggers","platform":"android","month":"apr","status":"wip"},{"id":"disc-3","name":"Paywall cascade — segment timing","platform":"android","month":"may","status":"backlog"},{"id":"disc-4","name":"6 months discounts","platform":"ios","month":"mar","status":"done"},{"id":"disc-5","name":"Discount chain — engagement triggers","platform":"ios","month":"apr","status":"wip"},{"id":"disc-6","name":"Paywall cascade — segment timing","platform":"ios","month":"may","status":"backlog"}]},{"id":"upsell","name":"Upsell","cards":[{"id":"ups-1","name":"Upsell flow v 1.0","platform":"android","month":"mar","status":"done"},{"id":"ups-2","name":"Upsell flow v 2.0","platform":"android","month":"apr","status":"backlog"},{"id":"ups-3","name":"Library banner","platform":"android","month":"may","status":"backlog"},{"id":"ups-4","name":"Upsell flow v 1.0","platform":"ios","month":"mar","status":"done"},{"id":"ups-5","name":"Upsell flow v 2.0","platform":"ios","month":"apr","status":"backlog"},{"id":"ups-6","name":"Library banner","platform":"ios","month":"may","status":"backlog"}]},{"id":"upgrade","name":"Upgrade","cards":[{"id":"upg-1","name":"6m upgrade","platform":"android","month":"apr","status":"wip"},{"id":"upg-2","name":"6m upgrade","platform":"ios","month":"apr","status":"wip"}]},{"id":"energy","name":"Energy","cards":[{"id":"nrg-1","name":"More energy for segment","platform":"android","month":"apr","status":"wip"},{"id":"nrg-2","name":"Energy paywalls — honest CTA","platform":"android","month":"may","status":"backlog"},{"id":"nrg-3","name":"Energy paywalls — Max upgrade","platform":"android","month":"jun","status":"backlog"},{"id":"nrg-4","name":"More energy for segment","platform":"ios","month":"apr","status":"wip"},{"id":"nrg-5","name":"Energy paywalls — honest CTA","platform":"ios","month":"may","status":"backlog"},{"id":"nrg-6","name":"Energy paywalls — Max upgrade","platform":"ios","month":"jun","status":"backlog"}]},{"id":"other","name":"Other","cards":[{"id":"oth-1","name":"Cancel flow","platform":"android","month":"may","status":"backlog"},{"id":"oth-2","name":"Cancel flow","platform":"ios","month":"may","status":"backlog"}]},{"id":"courses","name":"Courses","cards":[{"id":"crs-1","name":"Initial segment: A0 Lessons","platform":"android","month":"apr","status":"wip"},{"id":"crs-2","name":"Initial segment: A0 Lessons","platform":"ios","month":"apr","status":"wip"}]},{"id":"chat-dialogs","name":"Chat-dialogs","cards":[{"id":"chat-1","name":"Chat dialogs redesign v 1.0","platform":"android","month":"may","status":"backlog"},{"id":"chat-2","name":"Chat dialogs redesign v 2.0","platform":"android","month":"jun","status":"backlog"},{"id":"chat-3","name":"Chat dialogs redesign v 1.0","platform":"ios","month":"may","status":"backlog"},{"id":"chat-4","name":"Chat dialogs redesign v 2.0","platform":"ios","month":"jun","status":"backlog"}]}]};
 
 // ── Init ──
 async function init() {
