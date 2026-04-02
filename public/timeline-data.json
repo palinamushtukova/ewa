@@ -183,9 +183,9 @@
           "name": "In-app upgrade",
           "platform": "android",
           "month": "mar",
-          "status": "testing",
-          "qa": "",
-          "dev": ""
+          "status": "done",
+          "qa": "Nikita",
+          "dev": "Rustam"
         },
         {
           "id": "ai2-2",
@@ -193,8 +193,8 @@
           "platform": "android",
           "month": "apr",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Rustam"
         },
         {
           "id": "ai2-3",
@@ -202,8 +202,8 @@
           "platform": "android",
           "month": "may",
           "status": "wip",
-          "qa": "",
-          "dev": ""
+          "qa": "Eugene",
+          "dev": "Rustam"
         },
         {
           "id": "ai2-4",
@@ -219,9 +219,9 @@
           "name": "In-app upgrade",
           "platform": "ios",
           "month": "mar",
-          "status": "testing",
-          "qa": "",
-          "dev": ""
+          "status": "done",
+          "qa": "Nikita",
+          "dev": "Artem"
         },
         {
           "id": "ai2-6",
@@ -229,8 +229,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Artem"
         },
         {
           "id": "ai2-7",
@@ -238,8 +238,8 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": "",
-          "dev": ""
+          "qa": "Eugene",
+          "dev": "Artem"
         },
         {
           "id": "ai2-8",
