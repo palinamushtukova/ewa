@@ -701,14 +701,14 @@ async function saveToRemote() {
   if (saveBtn) { saveBtn.textContent = 'Saving...'; saveBtn.disabled = true; }
 
   try {
-    var getUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath + '?ref=' + CONFIG.branch;
+    var getUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath + '?ref=' + CONFIG.branch + '&_=' + Date.now();
     var getResp = await fetch(getUrl, {
       headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
       cache: 'no-store'
     });
     if (!getResp.ok) throw new Error('Failed to get current sha (HTTP ' + getResp.status + ')');
     var getCurrent = await getResp.json();
-    remoteSha = getCurrent.sha;
+    var currentSha = getCurrent.sha;
 
     var content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
     var putUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath;
@@ -722,7 +722,7 @@ async function saveToRemote() {
       body: JSON.stringify({
         message: 'Update timeline ' + new Date().toISOString().slice(0, 16),
         content: content,
-        sha: remoteSha,
+        sha: currentSha,
         branch: CONFIG.branch
       })
     });
