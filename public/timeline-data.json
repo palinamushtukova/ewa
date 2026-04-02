@@ -201,7 +201,7 @@
           "name": "AI tutor trial",
           "platform": "android",
           "month": "may",
-          "status": "done",
+          "status": "wip",
           "qa": "",
           "dev": ""
         },
@@ -237,7 +237,7 @@
           "name": "AI tutor trial",
           "platform": "ios",
           "month": "may",
-          "status": "done",
+          "status": "wip",
           "qa": "",
           "dev": ""
         },
@@ -330,7 +330,7 @@
           "name": "Upsell flow v 2.0",
           "platform": "android",
           "month": "apr",
-          "status": "backlog",
+          "status": "wip",
           "qa": "",
           "dev": ""
         },
@@ -357,7 +357,7 @@
           "name": "Upsell flow v 2.0",
           "platform": "ios",
           "month": "apr",
-          "status": "backlog",
+          "status": "wip",
           "qa": "",
           "dev": ""
         },
