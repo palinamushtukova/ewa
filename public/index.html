@@ -731,6 +731,7 @@ async function saveToRemote() {
     }
     var result = await resp.json();
     if (result.content && result.content.sha) remoteSha = result.content.sha;
+    await fetch(PURGE_URL).catch(function() {});
     markClean();
     toast('Saved to GitHub');
   } catch (e) {
@@ -740,15 +741,16 @@ async function saveToRemote() {
   }
 }
 
+// ── CDN URLs (jsDelivr — instant purge, no auth for reading) ──
+var CDN_URL = 'https://cdn.jsdelivr.net/gh/' + CONFIG.repo + '@' + CONFIG.branch + '/' + CONFIG.jsonPath;
+var PURGE_URL = 'https://purge.jsdelivr.net/gh/' + CONFIG.repo + '@' + CONFIG.branch + '/' + CONFIG.jsonPath;
+
 // ── Init ──
 async function init() {
-  var apiUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath + '?ref=' + CONFIG.branch;
   try {
-    var resp = await fetch(apiUrl, { headers: { 'Accept': 'application/vnd.github+json' } });
-    if (!resp.ok) throw new Error('API ' + resp.status);
-    var json = await resp.json();
-    remoteSha = json.sha;
-    data = JSON.parse(decodeBase64UTF8(json.content));
+    var resp = await fetch(CDN_URL + '?t=' + Date.now(), { cache: 'no-store' });
+    if (!resp.ok) throw new Error('CDN ' + resp.status);
+    data = await resp.json();
   } catch (e) {
     try {
       var localResp = await fetch('./timeline-data.json');
