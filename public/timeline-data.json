@@ -183,9 +183,9 @@
           "name": "In-app upgrade",
           "platform": "android",
           "month": "mar",
-          "status": "done",
-          "qa": "Nikita",
-          "dev": "Rustam"
+          "status": "testing",
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-2",
@@ -193,17 +193,17 @@
           "platform": "android",
           "month": "apr",
           "status": "testing",
-          "qa": "Nikita",
-          "dev": "Rustam"
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-3",
           "name": "AI tutor trial",
           "platform": "android",
           "month": "may",
-          "status": "wip",
-          "qa": "Eugene",
-          "dev": "Rustam"
+          "status": "done",
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-4",
@@ -219,9 +219,9 @@
           "name": "In-app upgrade",
           "platform": "ios",
           "month": "mar",
-          "status": "done",
-          "qa": "Nikita",
-          "dev": "Artem"
+          "status": "testing",
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-6",
@@ -229,17 +229,17 @@
           "platform": "ios",
           "month": "apr",
           "status": "testing",
-          "qa": "Nikita",
-          "dev": "Artem"
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-7",
           "name": "AI tutor trial",
           "platform": "ios",
           "month": "may",
-          "status": "wip",
-          "qa": "Eugene",
-          "dev": "Artem"
+          "status": "done",
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-8",
