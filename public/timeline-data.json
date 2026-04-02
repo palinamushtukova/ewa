@@ -46,8 +46,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": "Eugene",
-          "dev": "Dmitry"
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-4",
@@ -106,8 +106,8 @@
           "platform": "android",
           "month": "mar",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Rustam"
         },
         {
           "id": "ai1-2",
@@ -115,8 +115,8 @@
           "platform": "android",
           "month": "apr",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Rustam"
         },
         {
           "id": "ai1-3",
@@ -124,8 +124,8 @@
           "platform": "android",
           "month": "may",
           "status": "wip",
-          "qa": "",
-          "dev": ""
+          "qa": "Eugene",
+          "dev": "Rustam"
         },
         {
           "id": "ai1-4",
@@ -142,8 +142,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Artem"
         },
         {
           "id": "ai1-6",
@@ -151,8 +151,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "testing",
-          "qa": "",
-          "dev": ""
+          "qa": "Nikita",
+          "dev": "Artem"
         },
         {
           "id": "ai1-7",
@@ -160,8 +160,8 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": "",
-          "dev": ""
+          "qa": "Eugene",
+          "dev": "Artem"
         },
         {
           "id": "ai1-8",
