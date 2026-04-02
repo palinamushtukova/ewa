@@ -28,7 +28,8 @@
           "platform": "android",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "Nikita",
+          "dev": "Artem"
         },
         {
           "id": "onb-2",
@@ -36,7 +37,8 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-3",
@@ -44,7 +46,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-4",
@@ -52,7 +55,8 @@
           "platform": "android",
           "month": "jun",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-5",
@@ -60,7 +64,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-6",
@@ -68,7 +73,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-7",
@@ -76,7 +82,8 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "onb-8",
@@ -84,7 +91,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -98,7 +106,8 @@
           "platform": "android",
           "month": "mar",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-2",
@@ -106,7 +115,8 @@
           "platform": "android",
           "month": "apr",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-3",
@@ -114,7 +124,8 @@
           "platform": "android",
           "month": "may",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-4",
@@ -122,7 +133,8 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-5",
@@ -130,7 +142,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-6",
@@ -138,7 +151,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-7",
@@ -146,7 +160,8 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai1-8",
@@ -154,7 +169,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -168,7 +184,8 @@
           "platform": "android",
           "month": "mar",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-2",
@@ -176,7 +193,8 @@
           "platform": "android",
           "month": "apr",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-3",
@@ -184,7 +202,8 @@
           "platform": "android",
           "month": "may",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-4",
@@ -192,7 +211,8 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-5",
@@ -200,7 +220,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-6",
@@ -208,7 +229,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "testing",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-7",
@@ -216,7 +238,8 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ai2-8",
@@ -224,7 +247,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -238,7 +262,8 @@
           "platform": "android",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "disc-2",
@@ -246,7 +271,8 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "disc-3",
@@ -254,7 +280,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "disc-4",
@@ -262,7 +289,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "disc-5",
@@ -270,7 +298,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "disc-6",
@@ -278,7 +307,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -292,7 +322,8 @@
           "platform": "android",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ups-2",
@@ -300,7 +331,8 @@
           "platform": "android",
           "month": "apr",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ups-3",
@@ -308,7 +340,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ups-4",
@@ -316,7 +349,8 @@
           "platform": "ios",
           "month": "mar",
           "status": "done",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ups-5",
@@ -324,7 +358,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "ups-6",
@@ -332,7 +367,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -346,7 +382,8 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "upg-2",
@@ -354,7 +391,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -368,7 +406,8 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "nrg-2",
@@ -376,7 +415,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "nrg-3",
@@ -384,7 +424,8 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "nrg-4",
@@ -392,7 +433,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "nrg-5",
@@ -400,7 +442,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "nrg-6",
@@ -408,7 +451,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -422,7 +466,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "oth-2",
@@ -430,7 +475,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -444,7 +490,8 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "crs-2",
@@ -452,7 +499,8 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     },
@@ -466,7 +514,8 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "chat-2",
@@ -474,7 +523,8 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "chat-3",
@@ -482,7 +532,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         },
         {
           "id": "chat-4",
@@ -490,7 +541,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": ""
+          "qa": "",
+          "dev": ""
         }
       ]
     }
