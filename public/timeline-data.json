@@ -183,9 +183,9 @@
           "name": "In-app upgrade",
           "platform": "android",
           "month": "mar",
-          "status": "testing",
+          "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ai2-2",
@@ -194,7 +194,7 @@
           "month": "apr",
           "status": "testing",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ai2-3",
@@ -203,7 +203,7 @@
           "month": "may",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ai2-4",
@@ -219,9 +219,9 @@
           "name": "In-app upgrade",
           "platform": "ios",
           "month": "mar",
-          "status": "testing",
+          "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "ai2-6",
@@ -230,7 +230,7 @@
           "month": "apr",
           "status": "testing",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "ai2-7",
@@ -239,7 +239,7 @@
           "month": "may",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "ai2-8",
@@ -263,7 +263,7 @@
           "month": "mar",
           "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "disc-2",
@@ -272,7 +272,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "disc-3",
@@ -290,7 +290,7 @@
           "month": "mar",
           "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "disc-5",
@@ -299,7 +299,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "disc-6",
@@ -323,7 +323,7 @@
           "month": "mar",
           "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ups-2",
@@ -332,7 +332,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ups-3",
@@ -350,7 +350,7 @@
           "month": "mar",
           "status": "done",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "ups-5",
@@ -359,7 +359,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "ups-6",
@@ -383,7 +383,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "upg-2",
@@ -392,7 +392,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         }
       ]
     },
@@ -407,7 +407,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Dmitry"
         },
         {
           "id": "nrg-2",
@@ -434,7 +434,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Nikita",
-          "dev": ""
+          "dev": "Artem"
         },
         {
           "id": "nrg-5",
@@ -491,7 +491,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Dmitry"
         },
         {
           "id": "crs-2",
@@ -500,7 +500,7 @@
           "month": "apr",
           "status": "wip",
           "qa": "Eugene",
-          "dev": ""
+          "dev": "Artem"
         }
       ]
     },
