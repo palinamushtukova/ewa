@@ -105,7 +105,7 @@
           "name": "Ewa Max same duration",
           "platform": "android",
           "month": "mar",
-          "status": "testing",
+          "status": "done",
           "qa": "Nikita",
           "dev": "Rustam"
         },
@@ -141,7 +141,7 @@
           "name": "Ewa Max same duration",
           "platform": "ios",
           "month": "mar",
-          "status": "testing",
+          "status": "done",
           "qa": "Nikita",
           "dev": "Artem"
         },
