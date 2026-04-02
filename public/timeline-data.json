@@ -1,121 +1,549 @@
 {
   "months": [
-    { "id": "mar", "label": "Март" },
-    { "id": "apr", "label": "Апрель" },
-    { "id": "may", "label": "Май" },
-    { "id": "jun", "label": "Июнь" }
+    {
+      "id": "mar",
+      "label": "Март"
+    },
+    {
+      "id": "apr",
+      "label": "Апрель"
+    },
+    {
+      "id": "may",
+      "label": "Май"
+    },
+    {
+      "id": "jun",
+      "label": "Июнь"
+    }
   ],
   "layers": [
     {
       "id": "onboarding",
       "name": "Onboarding",
       "cards": [
-        { "id": "onb-1", "name": "Ewa Max upgrade on onboarding", "platform": "android", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "onb-2", "name": "Alternative Onboarding", "platform": "android", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "onb-3", "name": "Extended Level Test", "platform": "android", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "onb-4", "name": "AI Avatar", "platform": "android", "month": "jun", "status": "wip", "qa": "", "dev": "" },
-        { "id": "onb-5", "name": "Ewa Max upgrade on onboarding", "platform": "ios", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "onb-6", "name": "Extended Level Test", "platform": "ios", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "onb-7", "name": "WebView", "platform": "ios", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "onb-8", "name": "AI Avatar", "platform": "ios", "month": "jun", "status": "wip", "qa": "", "dev": "" }
+        {
+          "id": "onb-1",
+          "name": "Ewa Max upgrade on onboarding",
+          "platform": "android",
+          "month": "mar",
+          "status": "done",
+          "qa": "Nikita",
+          "dev": "Rustam"
+        },
+        {
+          "id": "onb-2",
+          "name": "Alternative Onboarding",
+          "platform": "android",
+          "month": "apr",
+          "status": "testing",
+          "qa": "Nikita",
+          "dev": "Dmitry"
+        },
+        {
+          "id": "onb-3",
+          "name": "Extended Level Test",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "Eugene",
+          "dev": "Dmitry"
+        },
+        {
+          "id": "onb-4",
+          "name": "AI Avatar",
+          "platform": "android",
+          "month": "jun",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "onb-5",
+          "name": "Ewa Max upgrade on onboarding",
+          "platform": "ios",
+          "month": "mar",
+          "status": "done",
+          "qa": "Nikita",
+          "dev": "Artem"
+        },
+        {
+          "id": "onb-6",
+          "name": "Extended Level Test",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip",
+          "qa": "Nikita",
+          "dev": "Artem"
+        },
+        {
+          "id": "onb-7",
+          "name": "WebView",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip",
+          "qa": "Eugene",
+          "dev": "Artem"
+        },
+        {
+          "id": "onb-8",
+          "name": "AI Avatar",
+          "platform": "ios",
+          "month": "jun",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "ai-monetization-1",
       "name": "AI Monetization (50%) — block 1",
       "cards": [
-        { "id": "ai1-1", "name": "Ewa Max same duration", "platform": "android", "month": "mar", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai1-2", "name": "Ewa Max same duration", "platform": "android", "month": "apr", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai1-3", "name": "AI tutor trial", "platform": "android", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "ai1-4", "name": "Short-subscription periods", "platform": "android", "month": "jun", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "ai1-5", "name": "Ewa Max same duration", "platform": "ios", "month": "mar", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai1-6", "name": "Ewa Max same duration", "platform": "ios", "month": "apr", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai1-7", "name": "AI tutor trial", "platform": "ios", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "ai1-8", "name": "Short-subscription periods", "platform": "ios", "month": "jun", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "ai1-1",
+          "name": "Ewa Max same duration",
+          "platform": "android",
+          "month": "mar",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-2",
+          "name": "Ewa Max same duration",
+          "platform": "android",
+          "month": "apr",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-3",
+          "name": "AI tutor trial",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-4",
+          "name": "Short-subscription periods",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-5",
+          "name": "Ewa Max same duration",
+          "platform": "ios",
+          "month": "mar",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-6",
+          "name": "Ewa Max same duration",
+          "platform": "ios",
+          "month": "apr",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-7",
+          "name": "AI tutor trial",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai1-8",
+          "name": "Short-subscription periods",
+          "platform": "ios",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "ai-monetization-2",
       "name": "AI Monetization (50%) — block 2",
       "cards": [
-        { "id": "ai2-1", "name": "In-app upgrade", "platform": "android", "month": "mar", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai2-2", "name": "In-app upgrade", "platform": "android", "month": "apr", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai2-3", "name": "AI tutor trial", "platform": "android", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "ai2-4", "name": "Short-subscription periods", "platform": "android", "month": "jun", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "ai2-5", "name": "In-app upgrade", "platform": "ios", "month": "mar", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai2-6", "name": "In-app upgrade", "platform": "ios", "month": "apr", "status": "testing", "qa": "", "dev": "" },
-        { "id": "ai2-7", "name": "AI tutor trial", "platform": "ios", "month": "may", "status": "wip", "qa": "", "dev": "" },
-        { "id": "ai2-8", "name": "Short-subscription periods", "platform": "ios", "month": "jun", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "ai2-1",
+          "name": "In-app upgrade",
+          "platform": "android",
+          "month": "mar",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-2",
+          "name": "In-app upgrade",
+          "platform": "android",
+          "month": "apr",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-3",
+          "name": "AI tutor trial",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-4",
+          "name": "Short-subscription periods",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-5",
+          "name": "In-app upgrade",
+          "platform": "ios",
+          "month": "mar",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-6",
+          "name": "In-app upgrade",
+          "platform": "ios",
+          "month": "apr",
+          "status": "testing",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-7",
+          "name": "AI tutor trial",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ai2-8",
+          "name": "Short-subscription periods",
+          "platform": "ios",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "discounts",
       "name": "Discounts",
       "cards": [
-        { "id": "disc-1", "name": "6 months discounts", "platform": "android", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "disc-2", "name": "Discount chain — engagement triggers", "platform": "android", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "disc-3", "name": "Paywall cascade — segment timing", "platform": "android", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "disc-4", "name": "6 months discounts", "platform": "ios", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "disc-5", "name": "Discount chain — engagement triggers", "platform": "ios", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "disc-6", "name": "Paywall cascade — segment timing", "platform": "ios", "month": "may", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "disc-1",
+          "name": "6 months discounts",
+          "platform": "android",
+          "month": "mar",
+          "status": "done",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "disc-2",
+          "name": "Discount chain — engagement triggers",
+          "platform": "android",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "disc-3",
+          "name": "Paywall cascade — segment timing",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "disc-4",
+          "name": "6 months discounts",
+          "platform": "ios",
+          "month": "mar",
+          "status": "done",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "disc-5",
+          "name": "Discount chain — engagement triggers",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "disc-6",
+          "name": "Paywall cascade — segment timing",
+          "platform": "ios",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "upsell",
       "name": "Upsell",
       "cards": [
-        { "id": "ups-1", "name": "Upsell flow v 1.0", "platform": "android", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "ups-2", "name": "Upsell flow v 2.0", "platform": "android", "month": "apr", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "ups-3", "name": "Library banner", "platform": "android", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "ups-4", "name": "Upsell flow v 1.0", "platform": "ios", "month": "mar", "status": "done", "qa": "", "dev": "" },
-        { "id": "ups-5", "name": "Upsell flow v 2.0", "platform": "ios", "month": "apr", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "ups-6", "name": "Library banner", "platform": "ios", "month": "may", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "ups-1",
+          "name": "Upsell flow v 1.0",
+          "platform": "android",
+          "month": "mar",
+          "status": "done",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ups-2",
+          "name": "Upsell flow v 2.0",
+          "platform": "android",
+          "month": "apr",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ups-3",
+          "name": "Library banner",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ups-4",
+          "name": "Upsell flow v 1.0",
+          "platform": "ios",
+          "month": "mar",
+          "status": "done",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ups-5",
+          "name": "Upsell flow v 2.0",
+          "platform": "ios",
+          "month": "apr",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "ups-6",
+          "name": "Library banner",
+          "platform": "ios",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "upgrade",
       "name": "Upgrade",
       "cards": [
-        { "id": "upg-1", "name": "6m upgrade", "platform": "android", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "upg-2", "name": "6m upgrade", "platform": "ios", "month": "apr", "status": "wip", "qa": "", "dev": "" }
+        {
+          "id": "upg-1",
+          "name": "6m upgrade",
+          "platform": "android",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "upg-2",
+          "name": "6m upgrade",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "energy",
       "name": "Energy",
       "cards": [
-        { "id": "nrg-1", "name": "More energy for segment", "platform": "android", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "nrg-2", "name": "Energy paywalls — honest CTA", "platform": "android", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "nrg-3", "name": "Energy paywalls — Max upgrade", "platform": "android", "month": "jun", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "nrg-4", "name": "More energy for segment", "platform": "ios", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "nrg-5", "name": "Energy paywalls — honest CTA", "platform": "ios", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "nrg-6", "name": "Energy paywalls — Max upgrade", "platform": "ios", "month": "jun", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "nrg-1",
+          "name": "More energy for segment",
+          "platform": "android",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "nrg-2",
+          "name": "Energy paywalls — honest CTA",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "nrg-3",
+          "name": "Energy paywalls — Max upgrade",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "nrg-4",
+          "name": "More energy for segment",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "nrg-5",
+          "name": "Energy paywalls — honest CTA",
+          "platform": "ios",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "nrg-6",
+          "name": "Energy paywalls — Max upgrade",
+          "platform": "ios",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "other",
       "name": "Other",
       "cards": [
-        { "id": "oth-1", "name": "Cancel flow", "platform": "android", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "oth-2", "name": "Cancel flow", "platform": "ios", "month": "may", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "oth-1",
+          "name": "Cancel flow",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "oth-2",
+          "name": "Cancel flow",
+          "platform": "ios",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "courses",
       "name": "Courses",
       "cards": [
-        { "id": "crs-1", "name": "Initial segment: A0 Lessons", "platform": "android", "month": "apr", "status": "wip", "qa": "", "dev": "" },
-        { "id": "crs-2", "name": "Initial segment: A0 Lessons", "platform": "ios", "month": "apr", "status": "wip", "qa": "", "dev": "" }
+        {
+          "id": "crs-1",
+          "name": "Initial segment: A0 Lessons",
+          "platform": "android",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "crs-2",
+          "name": "Initial segment: A0 Lessons",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip",
+          "qa": "",
+          "dev": ""
+        }
       ]
     },
     {
       "id": "chat-dialogs",
       "name": "Chat-dialogs",
       "cards": [
-        { "id": "chat-1", "name": "Chat dialogs redesign v 1.0", "platform": "android", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "chat-2", "name": "Chat dialogs redesign v 2.0", "platform": "android", "month": "jun", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "chat-3", "name": "Chat dialogs redesign v 1.0", "platform": "ios", "month": "may", "status": "backlog", "qa": "", "dev": "" },
-        { "id": "chat-4", "name": "Chat dialogs redesign v 2.0", "platform": "ios", "month": "jun", "status": "backlog", "qa": "", "dev": "" }
+        {
+          "id": "chat-1",
+          "name": "Chat dialogs redesign v 1.0",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "chat-2",
+          "name": "Chat dialogs redesign v 2.0",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "chat-3",
+          "name": "Chat dialogs redesign v 1.0",
+          "platform": "ios",
+          "month": "may",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        },
+        {
+          "id": "chat-4",
+          "name": "Chat dialogs redesign v 2.0",
+          "platform": "ios",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": ""
+        }
       ]
     }
   ]
