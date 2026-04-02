@@ -742,15 +742,22 @@ async function saveToRemote() {
 
 // ── Init ──
 async function init() {
+  var rawUrl = 'https://raw.githubusercontent.com/' + CONFIG.repo + '/' + CONFIG.branch + '/' + CONFIG.jsonPath + '?t=' + Date.now();
   try {
-    var resp = await fetch('./' + CONFIG.jsonPath);
+    var resp = await fetch(rawUrl);
     if (resp.ok) {
       data = await resp.json();
     } else {
-      throw new Error('not found');
+      throw new Error('raw fetch failed');
     }
-  } catch (e) {
-    data = JSON.parse(JSON.stringify(DEFAULT_DATA));
+  } catch (e1) {
+    try {
+      var localResp = await fetch('./timeline-data.json');
+      if (localResp.ok) data = await localResp.json();
+      else throw new Error('local fetch failed');
+    } catch (e2) {
+      data = JSON.parse(JSON.stringify(DEFAULT_DATA));
+    }
   }
   render();
 }
