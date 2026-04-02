@@ -742,19 +742,18 @@ async function saveToRemote() {
 
 // ── Init ──
 async function init() {
-  var rawUrl = 'https://raw.githubusercontent.com/' + CONFIG.repo + '/' + CONFIG.branch + '/' + CONFIG.jsonPath + '?t=' + Date.now();
+  var apiUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath + '?ref=' + CONFIG.branch;
   try {
-    var resp = await fetch(rawUrl);
-    if (resp.ok) {
-      data = await resp.json();
-    } else {
-      throw new Error('raw fetch failed');
-    }
-  } catch (e1) {
+    var resp = await fetch(apiUrl, { headers: { 'Accept': 'application/vnd.github+json' } });
+    if (!resp.ok) throw new Error('API ' + resp.status);
+    var json = await resp.json();
+    remoteSha = json.sha;
+    data = JSON.parse(decodeBase64UTF8(json.content));
+  } catch (e) {
     try {
       var localResp = await fetch('./timeline-data.json');
       if (localResp.ok) data = await localResp.json();
-      else throw new Error('local fetch failed');
+      else throw new Error('local failed');
     } catch (e2) {
       data = JSON.parse(JSON.stringify(DEFAULT_DATA));
     }
