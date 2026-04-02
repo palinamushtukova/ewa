@@ -54,7 +54,7 @@
           "name": "AI Avatar",
           "platform": "android",
           "month": "jun",
-          "status": "wip",
+          "status": "backlog",
           "qa": "",
           "dev": ""
         },
@@ -90,7 +90,7 @@
           "name": "AI Avatar",
           "platform": "ios",
           "month": "jun",
-          "status": "wip",
+          "status": "backlog",
           "qa": "",
           "dev": ""
         }
