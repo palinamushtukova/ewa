@@ -703,7 +703,8 @@ async function saveToRemote() {
   try {
     var getUrl = 'https://api.github.com/repos/' + CONFIG.repo + '/contents/' + CONFIG.jsonPath + '?ref=' + CONFIG.branch;
     var getResp = await fetch(getUrl, {
-      headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' }
+      headers: { 'Authorization': 'Bearer ' + token, 'Accept': 'application/vnd.github+json' },
+      cache: 'no-store'
     });
     if (!getResp.ok) throw new Error('Failed to get current sha (HTTP ' + getResp.status + ')');
     var getCurrent = await getResp.json();
