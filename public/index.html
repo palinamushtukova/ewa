@@ -295,11 +295,11 @@ function decodeBase64UTF8(b64) {
 
 function uid() { return Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
 
-function toast(msg, isError) {
+function toast(msg, isError, duration) {
   var t = document.getElementById('toast');
   t.textContent = msg;
   t.className = 'toast show' + (isError ? ' error' : '');
-  setTimeout(function() { t.className = 'toast'; }, 2500);
+  setTimeout(function() { t.className = 'toast'; }, duration || 2500);
 }
 
 function esc(s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; }
@@ -734,9 +734,8 @@ async function saveToRemote() {
     }
     var result = await resp.json();
     if (result.content && result.content.sha) remoteSha = result.content.sha;
-    await fetch(PURGE_URL).catch(function() {});
     markClean();
-    toast('Saved to GitHub');
+    toast('\u0421\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u043e! \u0418\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u044f \u0431\u0443\u0434\u0443\u0442 \u0432\u0438\u0434\u043d\u044b \u0432\u0441\u0435\u043c \u0447\u0435\u0440\u0435\u0437 1\u20132 \u043c\u0438\u043d\u0443\u0442\u044b', false, 5000);
   } catch (e) {
     toast('Error: ' + e.message, true);
   } finally {
@@ -744,24 +743,14 @@ async function saveToRemote() {
   }
 }
 
-// ── CDN URLs (jsDelivr — instant purge, no auth for reading) ──
-var CDN_URL = 'https://cdn.jsdelivr.net/gh/' + CONFIG.repo + '@' + CONFIG.branch + '/' + CONFIG.jsonPath;
-var PURGE_URL = 'https://purge.jsdelivr.net/gh/' + CONFIG.repo + '@' + CONFIG.branch + '/' + CONFIG.jsonPath;
-
 // ── Init ──
 async function init() {
   try {
-    var resp = await fetch(CDN_URL + '?t=' + Date.now(), { cache: 'no-store' });
-    if (!resp.ok) throw new Error('CDN ' + resp.status);
+    var resp = await fetch('./timeline-data.json?t=' + Date.now(), { cache: 'no-store' });
+    if (!resp.ok) throw new Error('fetch failed');
     data = await resp.json();
   } catch (e) {
-    try {
-      var localResp = await fetch('./timeline-data.json');
-      if (localResp.ok) data = await localResp.json();
-      else throw new Error('local failed');
-    } catch (e2) {
-      data = JSON.parse(JSON.stringify(DEFAULT_DATA));
-    }
+    data = JSON.parse(JSON.stringify(DEFAULT_DATA));
   }
   render();
 }
