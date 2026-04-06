@@ -72,7 +72,7 @@
           "name": "Extended Level Test",
           "platform": "ios",
           "month": "apr",
-          "status": "wip",
+          "status": "testing",
           "qa": "Nikita",
           "dev": "Artem"
         },
@@ -432,7 +432,7 @@
           "name": "More energy for segment",
           "platform": "ios",
           "month": "apr",
-          "status": "wip",
+          "status": "testing",
           "qa": "Nikita",
           "dev": "Artem"
         },
