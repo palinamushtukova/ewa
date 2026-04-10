@@ -41,15 +41,6 @@
           "dev": "Dmitry"
         },
         {
-          "id": "onb-3",
-          "name": "Extended Level Test",
-          "platform": "android",
-          "month": "may",
-          "status": "backlog",
-          "qa": "",
-          "dev": ""
-        },
-        {
           "id": "onb-4",
           "name": "AI Avatar",
           "platform": "android",
@@ -93,6 +84,15 @@
           "status": "backlog",
           "qa": "",
           "dev": ""
+        },
+        {
+          "id": "mnsr68j4crcnu",
+          "name": "First activity from onboarding",
+          "qa": "",
+          "dev": "",
+          "platform": "android",
+          "month": "may",
+          "status": "backlog"
         }
       ]
     },
