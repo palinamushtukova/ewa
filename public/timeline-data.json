@@ -93,6 +93,24 @@
           "platform": "android",
           "month": "may",
           "status": "backlog"
+        },
+        {
+          "id": "mnsr6nkb83gzd",
+          "name": "Copyright",
+          "qa": "",
+          "dev": "",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog"
+        },
+        {
+          "id": "mnsr6qf30j8he",
+          "name": "Copyright",
+          "qa": "",
+          "dev": "",
+          "platform": "ios",
+          "month": "jun",
+          "status": "backlog"
         }
       ]
     },
