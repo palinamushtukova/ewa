@@ -73,7 +73,7 @@
           "platform": "ios",
           "month": "may",
           "status": "wip",
-          "qa": "Eugene",
+          "qa": "Vsevolod",
           "dev": "Artem"
         },
         {
@@ -289,7 +289,7 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": "Eugene",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -316,7 +316,7 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": "Eugene",
+          "qa": "Vsevolod",
           "dev": "Artem"
         },
         {
@@ -409,7 +409,7 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": "Nikita",
+          "qa": "Eugene",
           "dev": "Artem"
         }
       ]
@@ -423,7 +423,7 @@
           "name": "More energy for segment",
           "platform": "android",
           "month": "apr",
-          "status": "wip",
+          "status": "testing",
           "qa": "Nikita",
           "dev": "Dmitry"
         },
