@@ -47,7 +47,7 @@
           "month": "jun",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Dmitry"
         },
         {
           "id": "onb-5",
@@ -89,7 +89,7 @@
           "id": "mnsr68j4crcnu",
           "name": "First activity from onboarding",
           "qa": "",
-          "dev": "",
+          "dev": "Dmitry",
           "platform": "android",
           "month": "may",
           "status": "backlog"
@@ -98,7 +98,7 @@
           "id": "mnsr6nkb83gzd",
           "name": "Copyright",
           "qa": "",
-          "dev": "",
+          "dev": "Dmitry",
           "platform": "android",
           "month": "jun",
           "status": "backlog"
@@ -152,7 +152,7 @@
           "month": "jun",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ai1-5",
@@ -230,7 +230,7 @@
           "month": "jun",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ai2-5",
@@ -299,7 +299,7 @@
           "month": "may",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "disc-4",
@@ -359,7 +359,7 @@
           "month": "may",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "ups-4",
@@ -434,7 +434,7 @@
           "month": "may",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "nrg-3",
@@ -443,7 +443,7 @@
           "month": "jun",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "nrg-4",
@@ -485,7 +485,7 @@
           "month": "may",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Rustam"
         },
         {
           "id": "oth-2",
@@ -533,7 +533,7 @@
           "month": "may",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Dmitry"
         },
         {
           "id": "chat-2",
@@ -542,7 +542,7 @@
           "month": "jun",
           "status": "backlog",
           "qa": "",
-          "dev": ""
+          "dev": "Dmitry"
         },
         {
           "id": "chat-3",
