@@ -101,7 +101,7 @@
           "dev": "Dmitry",
           "platform": "android",
           "month": "jun",
-          "status": "backlog"
+          "status": "wip"
         },
         {
           "id": "mnsr6qf30j8he",
@@ -110,7 +110,7 @@
           "dev": "",
           "platform": "ios",
           "month": "jun",
-          "status": "backlog"
+          "status": "wip"
         }
       ]
     },
@@ -408,7 +408,7 @@
           "name": "6m upgrade",
           "platform": "ios",
           "month": "apr",
-          "status": "wip",
+          "status": "testing",
           "qa": "Eugene",
           "dev": "Artem"
         }
@@ -527,11 +527,20 @@
       "name": "Chat-dialogs",
       "cards": [
         {
+          "id": "mo9wllc6dz4m7",
+          "name": "Сhat dialogs redesign v 1.0",
+          "qa": "",
+          "dev": "",
+          "platform": "ios",
+          "month": "apr",
+          "status": "wip"
+        },
+        {
           "id": "chat-1",
           "name": "Chat dialogs redesign v 1.0",
           "platform": "android",
-          "month": "may",
-          "status": "backlog",
+          "month": "apr",
+          "status": "wip",
           "qa": "",
           "dev": "Dmitry"
         },
@@ -539,25 +548,16 @@
           "id": "chat-2",
           "name": "Chat dialogs redesign v 2.0",
           "platform": "android",
-          "month": "jun",
+          "month": "may",
           "status": "backlog",
           "qa": "",
           "dev": "Dmitry"
         },
         {
-          "id": "chat-3",
-          "name": "Chat dialogs redesign v 1.0",
-          "platform": "ios",
-          "month": "may",
-          "status": "backlog",
-          "qa": "",
-          "dev": ""
-        },
-        {
           "id": "chat-4",
           "name": "Chat dialogs redesign v 2.0",
           "platform": "ios",
-          "month": "jun",
+          "month": "may",
           "status": "backlog",
           "qa": "",
           "dev": ""
