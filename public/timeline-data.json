@@ -46,7 +46,7 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Dmitry"
         },
         {
@@ -82,13 +82,13 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         },
         {
           "id": "mnsr68j4crcnu",
           "name": "First activity from onboarding",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Dmitry",
           "platform": "android",
           "month": "may",
@@ -97,7 +97,7 @@
         {
           "id": "mnsr6nkb83gzd",
           "name": "Copyright",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Dmitry",
           "platform": "android",
           "month": "may",
@@ -106,8 +106,8 @@
         {
           "id": "mnsr6qf30j8he",
           "name": "Copyright",
-          "qa": "",
-          "dev": "",
+          "qa": "Vsevolod",
+          "dev": "Artem",
           "platform": "ios",
           "month": "may",
           "status": "wip"
@@ -151,7 +151,7 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -187,8 +187,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -229,7 +229,7 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -265,8 +265,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -316,7 +316,7 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -325,8 +325,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -349,7 +349,7 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": "Eugene",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -358,7 +358,7 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -376,7 +376,7 @@
           "platform": "ios",
           "month": "apr",
           "status": "wip",
-          "qa": "Eugene",
+          "qa": "Vsevolod",
           "dev": "Artem"
         },
         {
@@ -385,8 +385,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -433,7 +433,7 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -442,7 +442,7 @@
           "platform": "android",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -460,8 +460,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         },
         {
           "id": "nrg-6",
@@ -469,8 +469,8 @@
           "platform": "ios",
           "month": "jun",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -484,7 +484,7 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Rustam"
         },
         {
@@ -493,8 +493,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -529,8 +529,8 @@
         {
           "id": "mo9wllc6dz4m7",
           "name": "Сhat dialogs redesign v 1.0",
-          "qa": "",
-          "dev": "",
+          "qa": "Vsevolod",
+          "dev": "Artem",
           "platform": "ios",
           "month": "apr",
           "status": "wip"
@@ -541,7 +541,7 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Dmitry"
         },
         {
@@ -550,7 +550,7 @@
           "platform": "android",
           "month": "may",
           "status": "backlog",
-          "qa": "",
+          "qa": "Vsevolod",
           "dev": "Dmitry"
         },
         {
@@ -559,8 +559,8 @@
           "platform": "ios",
           "month": "may",
           "status": "backlog",
-          "qa": "",
-          "dev": ""
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     }
