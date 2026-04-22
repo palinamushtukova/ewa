@@ -100,7 +100,7 @@
           "qa": "",
           "dev": "Dmitry",
           "platform": "android",
-          "month": "jun",
+          "month": "may",
           "status": "wip"
         },
         {
@@ -109,7 +109,7 @@
           "qa": "",
           "dev": "",
           "platform": "ios",
-          "month": "jun",
+          "month": "may",
           "status": "wip"
         }
       ]
@@ -293,15 +293,6 @@
           "dev": "Rustam"
         },
         {
-          "id": "disc-3",
-          "name": "Paywall cascade — segment timing",
-          "platform": "android",
-          "month": "may",
-          "status": "backlog",
-          "qa": "",
-          "dev": "Rustam"
-        },
-        {
           "id": "disc-4",
           "name": "6 months discounts",
           "platform": "ios",
@@ -320,10 +311,19 @@
           "dev": "Artem"
         },
         {
+          "id": "disc-3",
+          "name": "Paywall cascade — segment timing",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
+          "qa": "",
+          "dev": "Rustam"
+        },
+        {
           "id": "disc-6",
           "name": "Paywall cascade — segment timing",
           "platform": "ios",
-          "month": "may",
+          "month": "jun",
           "status": "backlog",
           "qa": "",
           "dev": ""
@@ -400,7 +400,7 @@
           "platform": "android",
           "month": "apr",
           "status": "wip",
-          "qa": "Nikita",
+          "qa": "Eugene",
           "dev": "Rustam"
         },
         {
