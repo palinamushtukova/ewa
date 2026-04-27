@@ -516,7 +516,7 @@
           "name": "Initial segment: A0 Lessons",
           "platform": "ios",
           "month": "apr",
-          "status": "wip",
+          "status": "testing",
           "qa": "Eugene",
           "dev": "Artem"
         }
