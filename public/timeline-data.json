@@ -41,15 +41,6 @@
           "dev": "Dmitry"
         },
         {
-          "id": "onb-4",
-          "name": "AI Avatar",
-          "platform": "android",
-          "month": "jun",
-          "status": "backlog",
-          "qa": "Vsevolod",
-          "dev": "Dmitry"
-        },
-        {
           "id": "onb-5",
           "name": "Ewa Max upgrade on onboarding",
           "platform": "ios",
@@ -77,15 +68,6 @@
           "dev": "Artem"
         },
         {
-          "id": "onb-8",
-          "name": "AI Avatar",
-          "platform": "ios",
-          "month": "jun",
-          "status": "backlog",
-          "qa": "Vsevolod",
-          "dev": "Artem"
-        },
-        {
           "id": "mnsr68j4crcnu",
           "name": "First activity from onboarding",
           "qa": "Vsevolod",
@@ -100,7 +82,7 @@
           "qa": "Vsevolod",
           "dev": "Dmitry",
           "platform": "android",
-          "month": "may",
+          "month": "jun",
           "status": "wip"
         },
         {
@@ -109,7 +91,7 @@
           "qa": "Vsevolod",
           "dev": "Artem",
           "platform": "ios",
-          "month": "may",
+          "month": "jun",
           "status": "wip"
         }
       ]
@@ -284,30 +266,12 @@
           "dev": "Rustam"
         },
         {
-          "id": "disc-2",
-          "name": "Discount chain — engagement triggers",
-          "platform": "android",
-          "month": "apr",
-          "status": "wip",
-          "qa": "Vsevolod",
-          "dev": "Rustam"
-        },
-        {
           "id": "disc-4",
           "name": "6 months discounts",
           "platform": "ios",
           "month": "mar",
           "status": "done",
           "qa": "Nikita",
-          "dev": "Artem"
-        },
-        {
-          "id": "disc-5",
-          "name": "Discount chain — engagement triggers",
-          "platform": "ios",
-          "month": "apr",
-          "status": "wip",
-          "qa": "Vsevolod",
           "dev": "Artem"
         },
         {
@@ -327,6 +291,24 @@
           "status": "backlog",
           "qa": "Vsevolod",
           "dev": "Artem"
+        },
+        {
+          "id": "disc-2",
+          "name": "Discount chain — engagement triggers",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "Vsevolod",
+          "dev": "Rustam"
+        },
+        {
+          "id": "disc-5",
+          "name": "Discount chain — engagement triggers",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip",
+          "qa": "Vsevolod",
+          "dev": "Artem"
         }
       ]
     },
@@ -344,24 +326,6 @@
           "dev": "Rustam"
         },
         {
-          "id": "ups-2",
-          "name": "Upsell flow v 2.0",
-          "platform": "android",
-          "month": "apr",
-          "status": "wip",
-          "qa": "Vsevolod",
-          "dev": "Rustam"
-        },
-        {
-          "id": "ups-3",
-          "name": "Library banner",
-          "platform": "android",
-          "month": "may",
-          "status": "backlog",
-          "qa": "Vsevolod",
-          "dev": "Rustam"
-        },
-        {
           "id": "ups-4",
           "name": "Upsell flow v 1.0",
           "platform": "ios",
@@ -371,20 +335,38 @@
           "dev": "Artem"
         },
         {
-          "id": "ups-5",
-          "name": "Upsell flow v 2.0",
-          "platform": "ios",
-          "month": "apr",
-          "status": "wip",
+          "id": "ups-3",
+          "name": "Library banner",
+          "platform": "android",
+          "month": "jun",
+          "status": "backlog",
           "qa": "Vsevolod",
-          "dev": "Artem"
+          "dev": "Rustam"
         },
         {
           "id": "ups-6",
           "name": "Library banner",
           "platform": "ios",
-          "month": "may",
+          "month": "jun",
           "status": "backlog",
+          "qa": "Vsevolod",
+          "dev": "Artem"
+        },
+        {
+          "id": "ups-2",
+          "name": "Upsell flow v 2.0",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "Vsevolod",
+          "dev": "Rustam"
+        },
+        {
+          "id": "ups-5",
+          "name": "Upsell flow v 2.0",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip",
           "qa": "Vsevolod",
           "dev": "Artem"
         }
@@ -395,15 +377,6 @@
       "name": "Upgrade",
       "cards": [
         {
-          "id": "upg-1",
-          "name": "6m upgrade",
-          "platform": "android",
-          "month": "apr",
-          "status": "wip",
-          "qa": "Eugene",
-          "dev": "Rustam"
-        },
-        {
           "id": "upg-2",
           "name": "6m upgrade",
           "platform": "ios",
@@ -411,6 +384,15 @@
           "status": "testing",
           "qa": "Eugene",
           "dev": "Artem"
+        },
+        {
+          "id": "upg-1",
+          "name": "6m upgrade",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "Eugene",
+          "dev": "Rustam"
         }
       ]
     },
@@ -527,28 +509,10 @@
       "name": "Chat-dialogs",
       "cards": [
         {
-          "id": "mo9wllc6dz4m7",
-          "name": "Сhat dialogs redesign v 1.0",
-          "qa": "Vsevolod",
-          "dev": "Artem",
-          "platform": "ios",
-          "month": "apr",
-          "status": "wip"
-        },
-        {
-          "id": "chat-1",
-          "name": "Chat dialogs redesign v 1.0",
-          "platform": "android",
-          "month": "apr",
-          "status": "wip",
-          "qa": "Vsevolod",
-          "dev": "Dmitry"
-        },
-        {
           "id": "chat-2",
           "name": "Chat dialogs redesign v 2.0",
           "platform": "android",
-          "month": "may",
+          "month": "jun",
           "status": "backlog",
           "qa": "Vsevolod",
           "dev": "Dmitry"
@@ -557,10 +521,28 @@
           "id": "chat-4",
           "name": "Chat dialogs redesign v 2.0",
           "platform": "ios",
-          "month": "may",
+          "month": "jun",
           "status": "backlog",
           "qa": "Vsevolod",
           "dev": "Artem"
+        },
+        {
+          "id": "chat-1",
+          "name": "Chat dialogs redesign v 1.0",
+          "platform": "android",
+          "month": "may",
+          "status": "wip",
+          "qa": "Vsevolod",
+          "dev": "Dmitry"
+        },
+        {
+          "id": "mo9wllc6dz4m7",
+          "name": "Сhat dialogs redesign v 1.0",
+          "qa": "Vsevolod",
+          "dev": "Artem",
+          "platform": "ios",
+          "month": "may",
+          "status": "wip"
         }
       ]
     }
