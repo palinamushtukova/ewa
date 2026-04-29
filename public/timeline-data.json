@@ -63,7 +63,7 @@
           "name": "Extended Level Test",
           "platform": "ios",
           "month": "apr",
-          "status": "testing",
+          "status": "done",
           "qa": "Eugene",
           "dev": "Artem"
         },
